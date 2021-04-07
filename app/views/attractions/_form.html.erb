@@ -27,8 +27,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :category_id %>
-    <%= form.text_field :category_id %>
+    <%= form.label :Category %>
+    <%= form.select :category_id, options_from_collection_for_select(Category.all, :id, :title),:selected => :category_id, :prompt => 'Select one!' %>
   </div>
 
   <div class="actions">

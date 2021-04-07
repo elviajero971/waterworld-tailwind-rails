@@ -13,16 +13,18 @@ class AttractionsController < ApplicationController
   # GET /attractions/new
   def new
     @attraction = Attraction.new
+    @categories = Category.all.map{ |c| [ c.title, c.id ] }
   end
 
   # GET /attractions/1/edit
   def edit
+    @categories = Category.all.map{|c| [ c.title, c.id ] }
   end
 
   # POST /attractions or /attractions.json
   def create
     @attraction = Attraction.new(attraction_params)
-
+    @attraction.category_id = params[:category_id]
     respond_to do |format|
       if @attraction.save
         format.html { redirect_to @attraction, notice: "Attraction was successfully created." }
@@ -36,6 +38,7 @@ class AttractionsController < ApplicationController
 
   # PATCH/PUT /attractions/1 or /attractions/1.json
   def update
+    @attraction.category_id = params[:category_id]
     respond_to do |format|
       if @attraction.update(attraction_params)
         format.html { redirect_to @attraction, notice: "Attraction was successfully updated." }

@@ -9,7 +9,7 @@
         <div class="flex flex-col w-full pb-3 pt-10 px-3 bg-gradient-to-t from-black text-gray-200">
           <h3 class="text-base font-bold leading-5 uppercase"><%= attraction.title %></h3>
           <div class="inline-flex items-center">
-            <span class="capitalize font-base text-xs my-1 mr-1"><%= attraction.category_id %></span>
+            <span class="capitalize font-base text-xs my-1 mr-1"><%= Category.find(attraction.category_id).title %></span>
           </div>
           <div class="flex flex-row justify-between">
             <div class="flex flex-row">
