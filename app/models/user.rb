@@ -7,8 +7,24 @@ class User < ApplicationRecord
 
   attr_writer :login
 
+  validate :validate_firstname
+
   def login
-    @login || lastname || email
+    @login || firstname || email
+  end
+
+  def self.find_for_database_authentication(warden_conditions)
+    conditions = warden_conditions.dup
+    if login = conditions.delete(:login)
+        where(conditions.to_h).where(["lower(firstname) = :value OR lower(email) = :value", { :value => login.downcase}]).first
+    elsif conditions.has_key?(:firstname) || conditions.has_key?(:email)
+    end
+  end
+
+  def validate_firstname
+    if User.where(email: firstname).exists?
+      errors.add(:firstname, :invalid)
+    end
   end
 
   validates :firstname, :lastname, presence: true

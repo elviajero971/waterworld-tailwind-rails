@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<div class="md:container md:mx-auto">
 <h1>Attractions</h1>
 
-<% @attractions.each do |attraction| %>
+  <% @attractions.each do |attraction| %>
 
-    <div class="bg-gray-100 m-auto w-96 h-64 mt-5" style="background-image:url('<%= rails_blob_url(attraction.image) %>'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <div class="bg-gray-100 w-96 h-64 mt-5 rounded-md" style="background-image:url('<%= rails_blob_url(attraction.image) %>'); background-position: center; background-repeat: no-repeat; background-size: cover;">
       <div class="flex flex-row items-end h-full w-full">
         <div class="flex flex-col w-full pb-3 pt-10 px-3 bg-gradient-to-t from-black text-gray-200">
           <h3 class="text-base font-bold leading-5 uppercase"><%= attraction.title %></h3>
@@ -39,5 +39,5 @@
         </div>
       </div>
     </div>
-
-<% end %>
+  <% end %>
+</div>
