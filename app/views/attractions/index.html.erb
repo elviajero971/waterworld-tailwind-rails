@@ -1,43 +1,47 @@
 <p id="notice"><%= notice %></p>
-<div class="md:container md:mx-auto">
-<h1>Attractions</h1>
 
-  <% @attractions.each do |attraction| %>
+<div class="w-100 flex flex-col">
+    <h1 class="w-100 flex text-6xl justify-center font-bold uppercase">Attractions</h1>
+<div class="flex justify-center">
+  <div class="container w-100 flex flex-wrap justify-content-between">
+    <% @attractions.each do |attraction| %>
 
-    <div class="bg-gray-100 w-96 h-64 mt-5 rounded-md" style="background-image:url('<%= rails_blob_url(attraction.image) %>'); background-position: center; background-repeat: no-repeat; background-size: cover;">
-      <div class="flex flex-row items-end h-full w-full">
-        <div class="flex flex-col w-full pb-3 pt-10 px-3 bg-gradient-to-t from-black text-gray-200">
-          <h3 class="text-base font-bold leading-5 uppercase"><%= attraction.title %></h3>
-          <div class="inline-flex items-center">
-            <span class="capitalize font-base text-xs my-1 mr-1"><%= Category.find(attraction.category_id).title %></span>
-          </div>
-          <div class="flex flex-row justify-between">
-            <div class="flex flex-row">
-              <div class="w-max inline-flex items-center">
-                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-                <span class="text-xs ml-1 antialiased">0</span>
-              </div>
-              <div class="w-max inline-flex ml-4 items-center">
-                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-                <span class="text-xs ml-1 antialiased">1</span>
-              </div>
-              <div class="w-max inline-flex ml-4 items-center">
-                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span class="text-xs ml-1 antialiased"><%= attraction.published_at %></span>
-              </div>
+      <div class="bg-gray-100 w-11/12 sm:w-9/12 md:w-1/3 lg:w-1/3 h-96 mt-8 rounded-xl flex justify-center" style="background-image:url('<%= rails_blob_url(attraction.image) %>'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <div class="flex flex-row items-end h-full w-full">
+          <div class="flex flex-col w-full pb-3 pt-10 px-3 bg-gradient-to-t from-black text-gray-200">
+            <h3 class="text-base font-bold leading-5 uppercase"><%= attraction.title %></h3>
+            <div class="inline-flex items-center">
+              <span class="capitalize font-base text-xs my-1 mr-1"><%= Category.find(attraction.category_id).title %></span>
             </div>
-            <div class="w-max">
-              <%= link_to 'See more', attraction %>
+            <div class="flex flex-row justify-between">
+              <div class="flex flex-row">
+                <div class="w-max inline-flex items-center">
+                  <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                  <span class="text-xs ml-1 antialiased">0</span>
+                </div>
+                <div class="w-max inline-flex ml-4 items-center">
+                  <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                  <span class="text-xs ml-1 antialiased">1</span>
+                </div>
+                <div class="w-max inline-flex ml-4 items-center">
+                  <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span class="text-xs ml-1 antialiased"><%= attraction.published_at %></span>
+                </div>
+              </div>
+              <div class="w-max">
+                <%= link_to 'See more', attraction %>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+</div>
 </div>
