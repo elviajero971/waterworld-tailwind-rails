@@ -7,12 +7,16 @@ ActiveAdmin.register Attraction do
   #
   permit_params :title, :description, :category_id, :image, :published_at
 
+  scope :all
+  scope :published
+  scope :unpublished
+
   form do |f|
     f.semantic_errors # shows errors on :base
     f.inputs do
       f.input :title
       f.input :description
-      f.input :category_id
+      f.input :category
       f.input :image, as: :file
       f.actions
     end
@@ -37,9 +41,19 @@ ActiveAdmin.register Attraction do
     link_to "Publish", publish_admin_attraction_path(attraction), method: :put if !attraction.published_at?
   end
 
+  action_item :publish, only: :show do
+    link_to "Unpublish", unpublish_admin_attraction_path(attraction), method: :put if attraction.published_at?
+  end
+
   member_action :publish, method: :put do
     attraction = Attraction.find(params[:id])
     attraction.update(published_at: Time.zone.now)
+    redirect_to admin_attraction_path(attraction)
+  end
+
+  member_action :unpublish, method: :put do
+    attraction = Attraction.find(params[:id])
+    attraction.update(published_at: nil)
     redirect_to admin_attraction_path(attraction)
   end
   #

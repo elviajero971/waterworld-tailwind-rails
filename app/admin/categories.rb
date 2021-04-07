@@ -26,9 +26,19 @@ ActiveAdmin.register Category do
     link_to "Publish", publish_admin_category_path(category), method: :put if !category.published_at?
   end
 
+  action_item :publish, only: :show do
+    link_to "Unpublish", unpublish_admin_category_path(category), method: :put if category.published_at?
+  end
+
   member_action :publish, method: :put do
     category = Category.find(params[:id])
     category.update(published_at: Time.zone.now)
+    redirect_to admin_category_path(category)
+  end
+
+  member_action :unpublish, method: :put do
+    category = Category.find(params[:id])
+    category.update(published_at: nil)
     redirect_to admin_category_path(category)
   end
   #

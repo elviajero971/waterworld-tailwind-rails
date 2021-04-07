@@ -2,4 +2,4 @@
 <%= current_user.lastname %>
 <%= current_user.email %>
 
-<%= link_to "Update my infos", edit_user_path(current_user.slug), method: :put %>
+<%= link_to "Update my infos", edit_user_registration_path(current_user) %>

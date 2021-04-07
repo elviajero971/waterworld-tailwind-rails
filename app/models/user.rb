@@ -5,6 +5,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  attr_writer :login
+
+  def login
+    @login || lastname || email
+  end
+
+  validates :firstname, :lastname, presence: true
   def to_param
     "#{id}-#{firstname}-#{lastname}"
   end

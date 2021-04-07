@@ -3,7 +3,7 @@ class AttractionsController < ApplicationController
 
   # GET /attractions or /attractions.json
   def index
-    @attractions = Attraction.all
+    @attractions = Attraction.where.not(published_at: nil)
   end
 
   # GET /attractions/1 or /attractions/1.json
