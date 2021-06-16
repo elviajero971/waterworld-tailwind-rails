@@ -1,0 +1,11 @@
+fr:
+  devise:
+    passwords:
+      new:
+        title: "Mot de passe oublié"
+        email_label: "Email"
+        validate_button: "Valider"
+        first_visit: "Première visite ?"
+        create_account_button: "Créer un compte"
+        already_has_account: "Déjà un compte ?"
+        connect_account_button: "Se connecter"

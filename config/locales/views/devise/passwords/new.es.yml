@@ -1,0 +1,4 @@
+es:
+  devise:
+    passwords:
+      new:

@@ -1,0 +1,38 @@
+en:
+  devise:
+    registrations:
+      new:
+        title: "New account"
+        form:
+          email:
+            label: "Email"
+          first_name:
+            label: "Firstname"
+          last_name:
+            label: "Lastname"
+          phone:
+            label: "Phone number"
+          address:
+            label: "Address"
+          city:
+            label: "City"
+          postal_code:
+            label: "Postal code"
+          career_beginning:
+            label: "Career start date"
+          password:
+            label: "Password"
+            hint: "%{minimum_password_length} characters minimum, 1 upper_case letter, 1 digit and one special character"
+          password_confirmation:
+            label: "Password confirmation"
+          language:
+            label: "Language"
+          subscription:
+            text: "I  want to receive news and recommendations from HOLIVIA"
+          submit:
+            button: "submit"
+        have_account:
+          content: "Already have an account?"
+          button: "Sign in"
+
+

@@ -1,0 +1,4 @@
+es:
+  devise:
+    registrations:
+      edit:

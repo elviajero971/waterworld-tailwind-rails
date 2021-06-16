@@ -1,0 +1,35 @@
+fr:
+  devise:
+    registrations:
+      edit:
+        title: "Modifier mon compte"
+        form:
+          email:
+            label: "Email"
+          first_name:
+            label: "Prénom"
+          last_name:
+            label: "Nom"
+          phone:
+            label: "Numéro de téléphone"
+          address:
+            label: "Adresse"
+          city:
+            label: "Ville"
+          postal_code:
+            label: "Code postale"
+          new_password:
+            label: "Nouveau mot de passe"
+            hint: "Ne remplissez pas ce champ si vous souhaitez conserver votre mot de passe"
+          new_password_confirmation:
+            label: "Confirmation de mot de passe"
+            hint: "Ne remplissez pas ce champ si vous souhaitez conserver votre mot de passe"
+          language:
+            label: "Langue"
+          submit:
+            button: "Mettre à jour"
+          cancel:
+            button: "Annuler"
+        delete_account:
+          button: "Supprimer mon compte"
+          confirmation: "Merci de confirmer la suppression"

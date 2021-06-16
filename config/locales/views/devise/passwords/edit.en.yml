@@ -1,0 +1,9 @@
+en:
+  devise:
+    passwords:
+      edit:
+        title: "New password"
+        password_label: "New password"
+        hint: "%{minimum_password_length} characters minimum, 1 upper_case letter, 1 digit and one special character"
+        password_confirmation_label: "Password confirmation"
+        modify_password_button: "Change my password"

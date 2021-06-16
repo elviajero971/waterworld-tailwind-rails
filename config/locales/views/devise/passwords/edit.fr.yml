@@ -1,0 +1,9 @@
+fr:
+  devise:
+    passwords:
+      edit:
+        title: "Nouveau mot de passe"
+        password_label: "Nouveau mot de passe"
+        hint: "%{minimum_password_length} caractères minimum, 1 majuscule, 1 chiffre et un caractère spécial"
+        password_confirmation_label: "Confirmation mot de passe"
+        modify_password_button: "Modifier mon mot de passe"

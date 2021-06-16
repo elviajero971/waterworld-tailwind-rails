@@ -8,7 +8,7 @@ class User < ApplicationRecord
   attr_writer :login
 
   validate :validate_firstname
-
+  enum language: [:fr, :en, :es]
   def login
     @login || firstname || email
   end

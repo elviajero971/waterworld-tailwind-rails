@@ -11,21 +11,27 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field py-2 text-left">
-    <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "bg-gray-200 border-2 border-gray-100 focus:outline-none bg-gray-100 block w-full py-2 px-4 rounded-lg focus:border-gray-700" %>
   </div>
 
   <div class="field py-2 text-left">
-    <%= f.label :firstname %><br />
     <%= f.text_field :firstname, autofocus: true, autocomplete: "firstname", class: "bg-gray-200 border-2 border-gray-100 focus:outline-none bg-gray-100 block w-full py-2 px-4 rounded-lg focus:border-gray-700"%>
   </div>
 
   <div class="field py-2 text-left">
-    <%= f.label :lastname %><br />
     <%= f.text_field :lastname, autofocus: true, autocomplete: "lastname", class: "bg-gray-200 border-2 border-gray-100 focus:outline-none bg-gray-100 block w-full py-2 px-4 rounded-lg focus:border-gray-700"%>
   </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+  <div class="field py-2 text-left">
+    <%= f.input :language,
+              required: true,
+              collection: options_for_enum(resource, :language),
+              label: 'choose  a language',
+                class: "bg-gray-200 border-2 border-gray-100 focus:outline-none bg-gray-100 block w-full py-2 px-4 rounded-lg focus:border-gray-700"
+    %>
+  </div>
+
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 

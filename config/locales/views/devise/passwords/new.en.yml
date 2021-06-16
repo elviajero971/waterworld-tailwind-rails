@@ -1,0 +1,11 @@
+en:
+  devise:
+    passwords:
+      new:
+        title: "Forgot your password"
+        email_label: "Email"
+        validate_button: "Validate"
+        first_visit: "First visit ?"
+        create_account_button: "Create an account"
+        already_has_account: "Have an account already ?"
+        connect_account_button: "Sign in"

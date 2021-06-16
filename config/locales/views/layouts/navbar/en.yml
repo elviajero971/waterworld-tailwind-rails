@@ -1,0 +1,18 @@
+en:
+  layouts:
+    navbar:
+      make_booking:
+        text: "Make a booking"
+      attractions:
+        text: "Attractions"
+      about:
+        text: "About"
+      contact:
+        text: "Contact"
+      connection:
+        text: "Connection"
+      link:
+        my-account: "My account"
+        sign-out: "Sign Out"
+        sign-up: "Sign Up"
+        sign-in: "Sign In"

@@ -1,6 +1,5 @@
 $(document).ready(function (){
   $('#navbar-profile-button').click(function () {
-    console.log('click');
     if($('#toggle-profile').hasClass("hidden")){
       $('#toggle-profile').removeClass("hidden");
     }else{
@@ -16,6 +15,16 @@ $(document).ready(function (){
       $('#mobile-menu').removeClass("hidden");
     }else{
       $('#mobile-menu').addClass("hidden");
+    }
+  })
+})
+
+$(document).ready(function (){
+  $('#navbar-language-button').click(function () {
+    if($('#toggle-language').hasClass("hidden")){
+      $('#toggle-language').removeClass("hidden");
+    }else{
+      $('#toggle-language').addClass("hidden");
     }
   })
 })

@@ -1,0 +1,21 @@
+en:
+  devise:
+    sessions:
+      new:
+        title: "Sign In"
+        form:
+          email:
+            label: "Email"
+          password:
+            label: "Password"
+          remember_me:
+            text: "Remember me"
+          submit:
+            button: "Sign in"
+        forgotten_password:
+          button: "Forgot your password ?"
+        new:
+          text: "New to HOLIVIA ?"
+          button_sign_up: "Create an account"
+
+

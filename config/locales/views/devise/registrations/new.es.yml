@@ -1,0 +1,36 @@
+es:
+  devise:
+    registrations:
+      new:
+        title: "Nueva cuenta"
+        form:
+          email:
+            label: "Correo electrónico"
+          first_name:
+            label: "Nombre"
+          last_name:
+            label: "Apellido"
+          phone:
+            label: "Número de teléfono"
+          address:
+            label: "Dirección"
+          city:
+            label: "Cuidad"
+          postal_code:
+            label: "Codigo postal"
+          password:
+            label: "Contraseña"
+            hint: "%{minimum_password_length} caracteres mínimos, 1 letra mayúscula, 1 dígito y un carácter especial"
+          password_confirmation:
+            label: "Confirmación de la contraseña"
+          language:
+            label: "Idioma"
+          subscription:
+            text: "Quiero recibir noticias y recomendaciones de WATERWORLD"
+          submit:
+            button: "Enviar"
+        have_account:
+          content: "¿Ya tiene una cuenta?"
+          button: "Se conecta"
+
+

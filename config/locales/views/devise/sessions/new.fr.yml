@@ -1,0 +1,19 @@
+fr:
+  devise:
+    sessions:
+      new:
+        title: "Se connecter"
+        form:
+          email:
+            label: "Email"
+          password:
+            label: "Mot de passe"
+          remember_me:
+            text: "Se souvenir de moi"
+          submit:
+            button: "Connexion"
+        forgotten_password:
+          button: "Mot de passe oublié ?"
+        new:
+          text: "Nouveau chez HOLIVIA ?"
+          button_sign_up: "Créer un compte"

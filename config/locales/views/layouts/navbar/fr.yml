@@ -1,0 +1,13 @@
+fr:
+  layouts:
+    navbar:
+      make_booking:
+        text: "Faire une réservation"
+      attractions:
+        text: "Attractions"
+      about:
+        text: "À propos"
+      contact:
+        text: "Contact"
+      connection:
+        text: "Connexion"

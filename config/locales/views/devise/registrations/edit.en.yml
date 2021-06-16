@@ -1,0 +1,43 @@
+en:
+  devise:
+    registrations:
+      edit:
+        title: "Modify your account information"
+        form:
+          email:
+            label: "Email"
+          first_name:
+            label: "Firstname"
+          last_name:
+            label: "Lastname"
+          phone:
+            label: "Phone number"
+          address:
+            label: "Address"
+          city:
+            label: "City"
+          postal_code:
+            label: "Postal code"
+          career_beginning:
+            label: "Career start date"
+          job_badge:
+            label: "Your profession"
+            psy: "Psychologist"
+            psy_practitioner: "Psycho-practitioner"
+          profile_picture:
+            place_holder: "Choose a picture"
+          new_password:
+            label: "New password"
+            hint: "Don't fill up this area if you don't want to change your password"
+          new_password_confirmation:
+            label: "New password confirmation"
+            hint: "Don't fill up this area if you don't want to change your password"
+          language:
+            label: "Language"
+          submit:
+              button: "Update"
+          cancel:
+            button: "Cancel"
+        delete_account:
+          button: "Delete my account"
+          confirmation: "Are you sure you want to delete your account ? This action is irreversible"

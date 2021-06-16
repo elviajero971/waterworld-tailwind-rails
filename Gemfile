@@ -58,3 +58,6 @@ gem 'activeadmin'
 gem 'cancancan'
 gem 'draper'
 gem 'pundit'
+
+gem 'rails-i18n', '6.0.0'
+gem 'mobility'
