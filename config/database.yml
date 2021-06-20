@@ -17,17 +17,17 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: postgres
-  password: postgres
+  username: waterworld
+  password: waterworld
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: myapp_development
-  username: postgres
-  password: postgres
+  database: waterworld_development
+  username: waterworld
+  password: waterworld
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -60,9 +60,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: myapp_test
-  username: postgres
-  password: postgres
+  database: waterworld_test
+  username: waterworld
+  password: waterworld
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -84,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: myapp_production
-  username: postgres
+  database: waterworld_production
+  username: waterworld
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
